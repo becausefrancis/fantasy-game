@@ -1,0 +1,27 @@
+button#A {
+    visibility: hidden;
+}
+
+button#B {
+    visibility: hidden;
+}
+
+button#C{
+    visibility: hidden;
+}
+
+button#D {
+    visibility: hidden;
+}
+
+button#startbutton {
+    visibility: visible;
+}
+
+button#restartbutton {
+    visibility: hidden;
+}
+
+div#inventory {
+    visibility: hidden;
+}
