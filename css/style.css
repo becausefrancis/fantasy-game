@@ -1,27 +1,55 @@
-button#A {
+body {
+    text-align: center;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#story {
+    font-size: larger;
+}
+
+button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(246, 203, 150);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    display: inline-block;
+    margin: auto;
+}
+  
+button:hover {background-color: burlywood}
+  
+button:active {
+    background-color: burlywood;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#A {
     visibility: hidden;
 }
 
-button#B {
+#B {
     visibility: hidden;
 }
 
-button#C{
-    visibility: hidden;
-}
-
-button#D {
-    visibility: hidden;
-}
-
-button#startbutton {
+#startbutton {
     visibility: visible;
 }
 
-button#restartbutton {
-    visibility: hidden;
+#restartbutton {
+    visibility: visible;
 }
 
-div#inventory {
-    visibility: hidden;
-}
