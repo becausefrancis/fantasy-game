@@ -54,12 +54,13 @@ function youDied() {
 const partOne = () => {
     choiceOneEl.addEventListener('click', youDied);
     msg = 'poison. ☠️';
+    
     choiceTwoEl.addEventListener('click', () => {
         storyDisplayEl.innerHTML = `Well you really need to eat soon. You might die of hunger. If not hunger, then thirst! <br>
             You remember about hearing the thunder so that means it's raining outside. Perhaps, you can drink rainwater?`;
         choiceOneEl.textContent = 'Go outside under the ⛈️';
         choiceTwoEl.textContent = 'Stay inside and find something else.';
-        partTwo(); 
+        partTwo();   
     });
 };
  
@@ -75,6 +76,7 @@ const partTwo = () => {
         choiceOneEl.textContent = `Fine. I'll eat it.`
         choiceTwoEl.textContent = `No. It's 100% poisoned.`
         partThree();
+        choiceOneEl.removeEventListener('click', youDied);
     }); 
 }; 
 
@@ -87,21 +89,25 @@ const partThree = () => {
             With your sanity back, you saw a piece of envelope lying on the floor. It says "DO NOT OPEN!" <br>
             What are you going to do?`; 
         choiceOneEl.textContent = `Nobody tells me what to do. (Open)`;
-        choiceOneEl.textContent = `Nah. I could die from a papercut.`;
+        choiceTwoEl.textContent = `Nah. I could die from a papercut.`;
         partFour();
+        choiceTwoEl.removeEventListener('click', youDied);
     });
 };
  
 const partFour = () => {
-    choiceOneEl.addEventListener('click', () => {
+
+    choiceTwoEl.addEventListener('click', () => {
         storyDisplayEl.innerHTML = `The letter says: "Ah! You must be awake. Inside this envelope is a key. <br>
             Find the keyhole within this cave. Good luck!" <br><br>
             You have so many questions in your head right now but at this point, you just want to get out of here. <br>
             So you start feeling the walls, looking for a keyhole. <br><br>
             After 15 minutes, you found two keyholes! Which one will you insert the key to?`;
+        choiceOneEl.style.visibility = 'visible';
         choiceOneEl.textContent = '♠️';
         choiceTwoEl.textContent = '♣️';
     });
+
 };
 
 
